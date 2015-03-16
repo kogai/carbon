@@ -7,20 +7,31 @@ html
 
 ol
   padding-left 1.5rem
-  list-style-type lower-greek
 
 
 ul
   list-style-type none
 
 a
-  text-decoration none
+  text-decoration underline
   color black
   transition color fade-in ease-in delay
   &:hover
     color cornflowerblue
+    text-decoration none
 
 blockquote
   display flex
   p
     margin-left auto
+
+hr
+  margin 40px auto
+
+code
+  background-color #efefef
+  border 1px solid #ddd
+  color #333
+  padding 2px 4px
+  font-size 10px
+  border-radius 3px
