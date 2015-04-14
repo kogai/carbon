@@ -8,16 +8,19 @@ mixin footer-link(name)
         a(href=url_for(theme.menu[name]))
           = __(name)
 
-ul#footer-links
+mixin footer-link-out(url, name)
+  li
+    a(href=url, target='_blank')
+      |#{name}
+
+ul#footer-links.m-no-type
   //- +footer-link('about')
   //- +footer-link('archives')
   //- li
   //-   a.out-site(href=url_for(theme.feed))
   //-     = __("feed")
-  //- li
-  //-   a.out-site(href=theme.repo) Theme.Carbon
-  li
-    a.out-site(href='https://github.com/kogai' target="_blank") github
+  +footer-link-out('http://kindlize.it/', 'Kindle化された書籍の通知サービス')
+  +footer-link-out('https://github.com/kogai', 'githubアカウント')
 
 script(src=theme.cdn.jQuery + '/jquery/2.1.1/jquery.min.js')
 if theme.duoshuo

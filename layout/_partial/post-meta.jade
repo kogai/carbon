@@ -5,7 +5,8 @@ mixin extra(name, list)
   = __(name) + ': '
   if list && list.length > 0
     each item in list.toArray()
-      = item.name + ' '
+      li
+        a(href="/#{item.path}")
+          = item.name
   else
     = __('none')
-

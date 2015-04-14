@@ -1,0 +1,28 @@
+global-reset()
+myflex()
+  display -webkit-flex
+  display -moz-flex
+  display -ms-flex
+  display -o-flex
+  display flex
+
+ul, ol
+  &.m-no-type
+    padding-left 0
+    li
+      list-style-type none
+  &.tag-list
+    padding-left 0
+    li
+      list-style-type none
+      display inline-block
+      margin 5px
+      .tag-list-count
+        margin-left 4px
+        display inline-block
+        padding 2px 4px
+        padding-top 0
+        background-color #eee
+
+  li
+    list-style-type disc

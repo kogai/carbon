@@ -4,6 +4,7 @@ if config.author
 if config.description
   meta(name='desciption', content=config.description)
 meta(name='viewport', content='width=device-width, initial-scale=1.0')
+meta(name="google-site-verification" content="6odh3yWeoJZcUn9pM8T2JVYDM-7NxPiC2IJYC_zLEFc")
 title
   if page.title
     = page.title
@@ -13,3 +14,5 @@ link(rel='stylesheet', type='text/css', href=theme.cdn.normalize + '/normalize/3
 link(rel='stylesheet', type='text/css', href=theme.cdn.carbon + '/css/carbon.css')
 if theme.favicon
   link(rel="icon", href=theme.favicon)
+script.
+  window.twttr=(function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],t=window.twttr||{};if(d.getElementById(id))return t;js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);t._e=[];t.ready=function(f){t._e.push(f);};return t;}(document,"script","twitter-wjs"));

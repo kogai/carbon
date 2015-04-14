@@ -1,11 +1,18 @@
 mixin article(article)
   include meta
+  include post-meta
+
   .meta
     +meta(article)
+
   .extra
     +extra('tags', article.tags)
-  .extra
-    +extra('categories', article.categories)
+
+  ul.l-mt-10.m-no-type
+    li
+      a.twitter-share-button(href='https://twitter.com/share')
+        |Tweet
+
   .article-content
     if article.photos
       .gallery
@@ -25,4 +32,3 @@ mixin article(article)
     if article.next
       a#right-navigator(href=url_for(article.next.path))
         +title(article.next)
-
