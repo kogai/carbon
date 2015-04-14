@@ -5,7 +5,7 @@ mixin article(article)
   .meta
     +meta(article)
 
-  .extra
+  ul.extra.tag-list
     +extra('tags', article.tags)
 
   ul.l-mt-10.m-no-type
@@ -20,6 +20,7 @@ mixin article(article)
           a.gallery-img(href=url_for(photo))
             img(src=url_for(photo))
     != article.content
+
   #comments
   nav.pagination
     include title
