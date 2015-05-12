@@ -7,15 +7,26 @@ excerpt: true
 feed: /atom.xml
 repo: https://icylogic.net
 
+<<<<<<< HEAD
 widgets:
 - tag
 - recent_posts
 
 duoshuo:
+=======
+duoshuo: false
+mathjax: true
+>>>>>>> 1ccb51542452d742927178a852b678f2bf6fd81d
 
 cdn:
   normalize: '//dn-staticfile.qbox.me'
   carbon: ''
   duoshuo: '//static.duoshuo.com'
   jQuery: '//dn-staticfile.qbox.me'
+<<<<<<< HEAD
   pjax: '//dn-staticfile.qbox.me'
+=======
+  pjax: '//dn-staticfile.qbox.me'    
+  mathjax: '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'
+  
+>>>>>>> 1ccb51542452d742927178a852b678f2bf6fd81d
