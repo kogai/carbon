@@ -1,12 +1,8 @@
 mixin footer-link(name)
   if theme.menu[name]
     li
-      if config.language === 'zh-CN' || config.language === 'zh-TW'
-        a.zh(href=url_for(theme.menu[name]))
-          = __(name)
-      else
-        a(href=url_for(theme.menu[name]))
-          = __(name)
+      a(href=url_for(theme.menu[name]))
+        = __(name)
 
 mixin footer-link-out(url, name)
   li
@@ -14,8 +10,8 @@ mixin footer-link-out(url, name)
       |#{name}
 
 ul#footer-links.m-no-type
-  //- +footer-link('about')
-  //- +footer-link('archives')
+  +footer-link('works')
+  +footer-link('archives')
   //- li
   //-   a.out-site(href=url_for(theme.feed))
   //-     = __("feed")
@@ -29,10 +25,3 @@ if theme.duoshuo
   script(src=theme.cdn.duoshuo + "/embed.js")
 script(src=theme.cdn.pjax + '/jquery.pjax/1.9.2/jquery.pjax.min.js')
 script(src=theme.cdn.carbon + '/js/carbon.js')
-script.
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-33205064-7', 'auto');
-  ga('send', 'pageview');
